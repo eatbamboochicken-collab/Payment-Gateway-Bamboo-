@@ -1469,14 +1469,14 @@
      *
      * $5
      *
-     * → *153*3*1*017697*5#
+     * → *153*2*2*017697*5#
      *
      *
      * CENTS:
      *
      * $5.50
      *
-     * → *153*3*1*017697#
+     * → *153*2*2*017697#
      *
      * Customer enters 5.50 inside EcoCash.
      *
@@ -1571,7 +1571,7 @@
         if (Number.isInteger(amount)) {
 
           const ussd =
-            "*153*3*1*" +
+            "*153*2*2*" +
             MERCHANT_CODE +
             "*" +
             String(amount) +
@@ -1606,18 +1606,19 @@
          *
          * through the phone dialer.
          *
-         * The dialer converts it incorrectly.
+         * The dialer converts decimal characters
+         * incorrectly.
          *
          * Instead:
          *
-         * *153*3*1*017697#
+         * *153*2*2*017697#
          *
-         * Then the customer enters the
-         * exact amount inside EcoCash.
+         * Then the customer enters the exact
+         * decimal amount inside EcoCash.
          */
 
         const ussd =
-          "*153*3*1*" +
+          "*153*2*2*" +
           MERCHANT_CODE +
           "#";
 
@@ -1636,4 +1637,4 @@
   </script>
 
 </body>
-  </html>
+</html>
